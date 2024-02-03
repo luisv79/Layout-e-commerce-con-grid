@@ -1,0 +1,136 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+  body{
+    font-family: 'Roboto', sans-serif;
+  }
+
+  :root{
+   --rojo-principal: #E0312F;
+   --gris-fondo:#f3efef;
+   --gris-oscuro:#adabab;
+   --gris-profundo:#707070;
+  }
+
+  
+  .cabecera{
+    grid-area: header;
+    background-color: var(--rojo-principal);
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    }
+
+    .cabecera h2{
+      color: #fff;
+    }
+
+   .menu{
+    grid-area: menu;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--gris-fondo);
+    padding-top: 25px;
+    padding-left: 15px;
+    }
+
+    .menu h2{
+      margin-bottom: 15px;
+    }
+
+    .menu ul li{
+      list-style: none;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    .menu ul li span{
+      color: var(--gris-oscuro);
+    }
+
+
+    .productos{
+    grid-area: producto;
+    background-color: var(--gris-fondo);
+    }
+
+    .pie-de-pagina{
+    grid-area: footer;
+    background-color: var(--gris-oscuro);
+    text-align: center;
+    color: #fff;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    }
+
+    
+    .grid-container{
+      display: grid;
+      grid-template-areas:
+      "header header header header header"
+      "menu producto producto producto producto"
+      "footer footer footer footer footer";
+      }
+
+      .productos-contenedor{
+        display: grid;
+        grid-template-columns:auto auto auto;
+        justify-items: center;
+        gap: 15px;
+        margin-top: 30px;
+        margin-bottom: 25px;
+      }
+
+      .producto-item{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background-color: #fff;
+        width: 250px;
+        height: 370px;
+        border-radius: 10px;
+      }
+
+      .producto-item img{
+        width: 180px;
+        height: 180px;
+        margin: auto;
+      }
+
+      .producto-item h2{
+        font-size: large;
+        margin-top: 20px;
+      }
+
+      .producto-item p{
+        margin-top: 10px;
+      }
+      
+
+      .button{
+        background-color: #fff;
+        font-weight: 700;
+        border: solid 1px black;
+        color: var(--gris-profundo);
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      .button:hover{
+        background-color: var(--gris-fondo);
+      }
